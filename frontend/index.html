@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeNexus PR Assistant | Pro Level Code Review</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body class="dark-mode">
+    <div class="glass-container">
+        <nav class="navbar">
+            <div class="logo">
+                <span class="logo-icon">▲</span>
+                <span class="logo-text">CodeNexus PR</span>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="active">Review</a>
+                <a href="#">History</a>
+                <a href="#">Settings</a>
+            </div>
+        </nav>
+
+        <main class="content">
+            <header class="hero">
+                <h1>Elevate Your Code Quality</h1>
+                <p>Multi-agent AI pipeline for security scanning, complexity analysis, and documentation.</p>
+            </header>
+
+            <div class="main-grid">
+                <section class="editor-section">
+                    <div class="section-header">
+                        <span class="badge">Input</span>
+                        <h2>Source Code</h2>
+                    </div>
+                    <div class="terminal-wrapper">
+                        <div class="terminal-header">
+                            <div class="dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <input type="text" id="filename" value="main.py" spellcheck="false">
+                        </div>
+                        <textarea id="code-input" spellcheck="false" placeholder="Paste your Python code here..."></textarea>
+                    </div>
+                    <button id="run-btn" class="primary-btn">
+                        <span class="btn-icon">⚡</span>
+                        Analyze Code
+                    </button>
+                </section>
+
+                <section class="results-section">
+                    <div class="section-header">
+                        <span class="badge">Analysis</span>
+                        <h2>Insights</h2>
+                    </div>
+                    
+                    <div id="loader" class="hidden">
+                        <div class="spinner"></div>
+                        <p id="status-text">Thinking...</p>
+                    </div>
+
+                    <div id="results-display" class="hidden">
+                        <div class="verdict-banner" id="verdict-banner">
+                            <div class="verdict-icon" id="verdict-icon">✓</div>
+                            <div class="verdict-details">
+                                <h3 id="verdict-label">Safe</h3>
+                                <p id="verdict-reason">No critical issues found.</p>
+                            </div>
+                        </div>
+
+                        <div class="tabs">
+                            <button class="tab-btn active" data-tab="review">Review</button>
+                            <button class="tab-btn" data-tab="docs">Documentation</button>
+                            <button class="tab-btn" data-tab="raw">Raw Data</button>
+                        </div>
+
+                        <div class="tab-content" id="review-tab">
+                            <div class="markdown-body" id="review-content"></div>
+                        </div>
+                        <div class="tab-content hidden" id="docs-tab">
+                            <div class="markdown-body" id="docs-content"></div>
+                        </div>
+                        <div class="tab-content hidden" id="raw-tab">
+                            <pre id="raw-content"></pre>
+                        </div>
+                    </div>
+
+                    <div id="placeholder" class="placeholder-msg">
+                        <div class="placeholder-icon">🔍</div>
+                        <p>Submit code to see AI-powered insights.</p>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 CodeNexus AI • Powered by LangGraph & GPT-4o</p>
+        </footer >
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
