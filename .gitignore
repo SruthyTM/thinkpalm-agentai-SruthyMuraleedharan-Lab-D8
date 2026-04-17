@@ -29,6 +29,8 @@ ENV/
 
 # Database
 memory/checkpoints.db
+memory/checkpoints.db-shm
+memory/checkpoints.db-wal
 
 # IDEs
 .vscode/
